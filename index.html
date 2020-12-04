@@ -1,0 +1,30 @@
+---
+layout: home
+---
+<main class="home" id="home">
+  <div class="post-list">
+    {% for post in site.posts %}
+      <article>
+        <header>
+          <div class="entry-meta">
+            <span class="screen-reader-text">Publicerat</span>
+            <time class="entry-date" datetime="{{ post.date }}">{{ post.date | date: "%-d %B, %Y" }}</time>
+          </div>
+          <h3 class="entry-title">
+            <!-- <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -->
+            {{ post.title }}
+          </h3>
+        </header>
+        {{post.content}}
+      </article>
+    {% endfor %}
+    </div>
+</main>
+<aside>
+  <h2 class="widget-title">Partners</h2>
+  <a href="http://www.surfspot.se">
+    <img src="assets/logoblue-1.png" alt="SurfSpot logo" title="SurfSpot Sweden">
+    <span class="screen-reader-text">Surfspot sverige</span>
+  </a>
+  
+</aside>
